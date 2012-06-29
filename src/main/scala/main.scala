@@ -3,6 +3,7 @@ import scala.xml._
 
 import se.fishtank.css.selectors._
 import se.fishtank.css.selectors.Selectors._
+import model._
 
 
 
@@ -34,12 +35,13 @@ object JSONError {
     println(data)
 
     val json = data.toJSON
-    println(json)
+    println("\n\n%s\n".format(json))
 
-    val file = new File("out/"+filename)
-    println("Output file: "+file)
-    val p = new PrintWriter(file)
-    try { p.print(json) } finally { p.close() }
+    // TODO: this part doesn't work due to filepath errors
+//    val file = new File("out/"+filename)
+//    println("Output file: "+file)
+//    val p = new PrintWriter(file)
+//    try { p.print(json) } finally { p.close() }
   }
 }
 
